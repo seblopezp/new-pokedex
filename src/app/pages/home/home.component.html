@@ -1,3 +1,5 @@
-<p>home works!</p>
-
-<h1>qoaodsoad</h1>
+<div class="columns is-mobile is-multiline is-centered">
+    <div class="column is-one-quarter" *ngFor="let item of pokemon">
+        <app-pokemon-card [pokemonName]="item.name"></app-pokemon-card>
+    </div>
+</div>
