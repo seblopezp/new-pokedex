@@ -9,3 +9,15 @@ export class Data extends Pokemon {
   previous?: string;
   results?: Pokemon;
 }
+
+export class PokemonInfo {
+  abilities?: [];
+  base_experience?: number;
+  height?: number;
+  id?: number;
+  moves?: [];
+  sprites?: [];
+  stats?: [];
+  types?: [];
+  weight?: number;
+}
