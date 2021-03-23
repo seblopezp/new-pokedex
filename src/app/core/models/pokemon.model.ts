@@ -18,6 +18,12 @@ export class PokemonInfo {
   moves?: [];
   sprites?: [];
   stats?: [];
-  types?: [];
+  types?: [
+    {
+      type: {
+        name: string;
+      };
+    }
+  ];
   weight?: number;
 }
