@@ -11,12 +11,15 @@
             </div>
         </div>
 
-        <!-- <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
-            <br>
-            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-        </div> -->
+        <div class="content">
+            <small class="has-text-grey-light pkmnNumber">N.º {{pokemonInfo.id}}</small>
+            <div class="columns mt-1">
+                <div class="column is-half" *ngFor="let item of pokemonInfo.types">
+                    <p class="type" [ngClass]=" item.type.name">
+                        {{item.type.name | titlecase}}
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,3 +1,46 @@
 img {
   padding: 1.2rem;
 }
+
+.pkmnNumber {
+  font-weight: bold;
+}
+
+.type {
+  padding: 2px;
+  text-align: center;
+  border-radius: 1.25rem;
+  &.grass {
+    background-color: green;
+    color: white;
+  }
+
+  &.poison {
+    background-color: purple;
+    color: white;
+  }
+
+  &.fire {
+    background-color: red;
+    color: white;
+  }
+
+  &.water {
+    background-color: blue;
+    color: white;
+  }
+
+  &.bug {
+    background-color: rgb(1, 165, 1);
+    color: white;
+  }
+
+  &.normal {
+    background-color: grey;
+    color: white;
+  }
+
+  &.flying {
+    background: linear-gradient(to bottom, skyblue 60%, grey 0%);
+  }
+}
