@@ -14,7 +14,7 @@
         <div class="content">
             <small class="has-text-grey-light pkmnNumber">N.º {{pokemonInfo.id}}</small>
             <div class="columns mt-1">
-                <div class="column is-half" *ngFor="let item of pokemonInfo.types">
+                <div class="column" *ngFor="let item of pokemonInfo.types">
                     <p class="type" [ngClass]=" item.type.name">
                         {{item.type.name | titlecase}}
                     </p>

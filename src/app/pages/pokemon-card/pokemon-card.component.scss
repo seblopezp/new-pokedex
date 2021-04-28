@@ -1,3 +1,5 @@
+@import "/src/styles.scss";
+
 img {
   padding: 1.2rem;
 }
@@ -7,40 +9,37 @@ img {
 }
 
 .type {
-  padding: 2px;
+  padding: 0.125rem;
   text-align: center;
   border-radius: 1.25rem;
+  font-weight: 500;
+  color: $white;
+
   &.grass {
-    background-color: green;
-    color: white;
+    background-color: $light-green;
   }
 
   &.poison {
-    background-color: purple;
-    color: white;
+    background-color: $purple;
   }
 
   &.fire {
-    background-color: red;
-    color: white;
+    background-color: $red;
   }
 
   &.water {
-    background-color: blue;
-    color: white;
+    background-color: $blue;
   }
 
   &.bug {
-    background-color: rgb(1, 165, 1);
-    color: white;
+    background-color: $green;
   }
 
   &.normal {
-    background-color: grey;
-    color: white;
+    background-color: $grey;
   }
 
   &.flying {
-    background: linear-gradient(to bottom, skyblue 60%, grey 0%);
+    background: linear-gradient(to bottom, $sky-blue 60%, $grey 0%);
   }
 }
