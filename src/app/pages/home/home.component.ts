@@ -9,13 +9,12 @@ import { PokemonService } from '../../core/services/pokemon.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   pokemon: any;
+  total: number | any;
   destroy$: Subject<boolean> = new Subject<boolean>();
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit(): void {
-    if (localStorage.getItem('dataSource')) {
-      this.getPokemon();
-    }
+    this.getPokemon();
   }
 
   ngOnDestroy(): void {
@@ -28,7 +27,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       .getPokemon()
       .pipe(takeUntil(this.destroy$))
       .subscribe((data) => {
-        this.pokemon = data.results;
+        if (data) {
+          this.total = data.count;
+          console.log('El total en el home es ', this.total);
+          this.pokemon = data.results;
+        }
       });
   }
 }

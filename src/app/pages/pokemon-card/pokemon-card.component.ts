@@ -21,7 +21,6 @@ export class PokemonCardComponent implements OnInit {
       .getPokemonbyName(this.pokemonName)
       .subscribe((data: PokemonInfo) => {
         this.pokemonInfo = data;
-        console.log('Pokemon info', this.pokemonInfo);
         this.pokemonImage =
           'https://pokeres.bastionbot.org/images/pokemon/' +
           data['id'] +

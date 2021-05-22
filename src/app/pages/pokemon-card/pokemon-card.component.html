@@ -7,12 +7,12 @@
     <div class="card-content">
         <div class="media">
             <div class="media-content">
-                <p class="title is-4">{{pokemonName |titlecase}}</p>
+                <p class="title is-4">{{pokemonName |titlecase}} <small class="has-text-grey-light pkmnNumber">N.º
+                        {{pokemonInfo.id}}</small></p>
             </div>
         </div>
 
         <div class="content">
-            <small class="has-text-grey-light pkmnNumber">N.º {{pokemonInfo.id}}</small>
             <div class="columns mt-1">
                 <div class="column" *ngFor="let item of pokemonInfo.types">
                     <p class="type" [ngClass]=" item.type.name">
